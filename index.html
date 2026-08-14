@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Match Master - A Global Learning Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="main-header">
+
+            <h1>
+                Match Master - A Global Learning Game
+            </h1>
+
+        </header>
+
+
+        <!-- ================= LOGIN PAGE ================= -->
+
+        <section id="loginScreen" class="screen">
+
+            <div class="card login-card">
+
+                <h2>
+                    Enter Your Name
+                </h2>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                    autocomplete="off"
+                >
+
+                <button
+                    id="loginBtn"
+                    class="green-btn"
+                >
+                    Login
+                </button>
+
+                <p
+                    id="loginError"
+                    class="error"
+                ></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORY PAGE ================= -->
+
+        <section
+            id="categoryScreen"
+            class="screen hidden"
+        >
+
+            <div class="card category-card">
+
+                <button
+                    id="logoutBtn"
+                    class="logout"
+                >
+                    Logout
+                </button>
+
+
+                <h2>
+                    Welcome,
+                    <span id="welcomeName"></span>!
+                </h2>
+
+
+                <label for="category">
+                    Choose Category:
+                </label>
+
+
+                <select id="category">
+
+                    <option value="monument">
+                       🏛️ Monuments
+                    </option>
+
+                    <option value="flag">
+                        🚩Flag Matching
+                    </option>
+
+                    <option value="landmark">
+                        🗼 Famous Landmarks
+                    </option>
+
+                    <option value="currency">
+                        💰 Currencies
+                    </option>
+
+                    <option value="history">
+                        👤 Historical Figures
+                    </option>
+
+                </select>
+
+
+                <button
+                    id="startBtn"
+                    class="green-btn"
+                >
+                    Start
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GAME PAGE ================= -->
+
+        <section
+            id="gameScreen"
+            class="screen hidden"
+        >
+
+            <div class="card game-card">
+
+                <button
+                    id="gameLogoutBtn"
+                    class="logout"
+                >
+                    Logout
+                </button>
+
+
+                <h2>
+                    Welcome,
+                    <span id="gameName"></span>!
+                </h2>
+
+
+                <!-- DRAGGABLE IMAGES -->
+
+                <div
+                    id="items"
+                    class="items"
+                ></div>
+
+
+                <!-- DROP TARGETS -->
+
+                <div
+                    id="targets"
+                    class="targets"
+                ></div>
+
+
+                <p class="score">
+
+                    Score:
+                    <span id="score">0</span>
+                    /
+                    <span id="total">0</span>
+
+                </p>
+
+
+                <p
+                    id="gameMessage"
+                    class="game-message"
+                ></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULT PAGE ================= -->
+
+        <section id="resultScreen" class="screen hidden">
+
+            <div class="card result-card">
+
+                <button
+                    id="resultLogoutBtn"
+                    class="logout">
+                    Logout
+                </button>
+
+                <h2 class="result-title">
+                    Result
+                </h2>
+
+                <h3 class="result-welcome">
+                    Well Played,
+                    <span id="resultName"></span>! 🎉
+                </h3>
+
+                <!-- Result Circle -->
+
+                <div class="result-circle">
+
+                    <div class="circle-score">
+                        <span id="percentageScore">0%</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Score Information -->
+
+                <div class="result-info">
+
+                    <div class="result-box">
+
+                        <span class="result-label">
+                            Total Questions
+                        </span>
+
+                        <strong id="finalTotal">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-box">
+
+                        <span class="result-label">
+                            Correct Answers
+                        </span>
+
+                        <strong
+                            id="finalScore"
+                            class="correct-text">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-box">
+
+                        <span class="result-label">
+                            Wrong Answers
+                        </span>
+
+                        <strong
+                            id="wrongScore"
+                            class="wrong-text">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Result Message -->
+
+                <div
+                    id="resultMessage"
+                    class="result-message">
+                </div>
+
+
+                <!-- Matched Images -->
+
+                <h3 class="matched-title">
+                    Completed Matches
+                </h3>
+
+                <div
+                    id="resultImages"
+                    class="result-images">
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="result-buttons">
+
+                    <button
+                        id="backBtn"
+                        class="green-btn">
+                        Play Again
+                    </button>
+
+                    <button
+                        id="categoryBtn"
+                        class="category-btn">
+                        Back to Category
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

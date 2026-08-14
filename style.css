@@ -1,0 +1,1139 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    min-height: 100%;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+    color: #444;
+
+    background:
+        linear-gradient(
+            110deg,
+            #70ddd3 0%,
+            #72d9d0 38%,
+            #9ab9e8 100%
+        );
+}
+
+
+.page {
+
+    min-height: 100vh;
+
+    padding:
+        10px
+        16px
+        35px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.main-header {
+
+    width: 100%;
+
+    min-height: 170px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #d8f8f3,
+            #e7f0fa
+        );
+
+    border-radius: 24px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+.main-header h1 {
+
+    color: #00584f;
+
+    font-size:
+        clamp(
+            30px,
+            4vw,
+            40px
+        );
+
+    font-weight: 700;
+
+    text-shadow:
+        1px 2px 2px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================
+   SCREEN
+========================================== */
+
+.screen {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 40px;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.card {
+
+    width:
+        min(
+            690px,
+            94vw
+        );
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 28px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================
+   LOGIN
+========================================== */
+
+.login-card {
+
+    padding:
+        76px
+        30px
+        45px;
+
+    text-align: center;
+}
+
+
+.login-card h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 34px;
+
+    font-weight: 500;
+}
+
+
+.login-card input {
+
+    width: 92%;
+
+    height: 42px;
+
+    border:
+        1px solid
+        #d5d5d5;
+
+    border-radius: 9px;
+
+    padding:
+        0 12px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.login-card input:focus {
+
+    border-color: #008c7d;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(
+            0,
+            140,
+            125,
+            0.1
+        );
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.green-btn {
+
+    width: 92%;
+
+    height: 40px;
+
+    margin-top: 22px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #008c7d,
+            #005d52
+        );
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.green-btn:hover {
+
+    background:
+        linear-gradient(
+            90deg,
+            #007b6e,
+            #004e45
+        );
+
+    transform:
+        translateY(-1px);
+}
+
+
+.error {
+
+    color: #d33d3d;
+
+    margin-top: 10px;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   CATEGORY
+========================================== */
+
+.category-card {
+
+    position: relative;
+
+    padding:
+        75px
+        32px
+        45px;
+}
+
+
+.category-card h2 {
+
+    text-align: center;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    margin-bottom: 28px;
+}
+
+
+.category-card label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+
+.category-card select {
+
+    width: 100%;
+
+    height: 43px;
+
+    border:
+        1px solid
+        #2a9e93;
+
+    border-radius: 10px;
+
+    padding:
+        0 13px;
+
+    background: white;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.category-card .green-btn {
+
+    width: 100%;
+
+    margin-top: 24px;
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+.logout {
+
+    position: absolute;
+
+    right: 32px;
+
+    top: 25px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #d94444;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   GAME
+========================================== */
+
+.game-card {
+
+    position: relative;
+
+    padding:
+        70px
+        30px
+        48px;
+
+    min-height: 500px;
+}
+
+
+.game-card h2 {
+
+    text-align: center;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    margin-bottom: 34px;
+}
+
+
+/* ==========================================
+   DRAG ITEMS
+========================================== */
+
+.items {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 110px;
+
+    margin-bottom: 26px;
+
+    flex-wrap: wrap;
+}
+
+
+.draggable {
+
+    width: 105px;
+
+    height: 95px;
+
+    border-radius: 12px;
+
+    object-fit: cover;
+
+    border:
+        2px solid
+        #d7d7d7;
+
+    box-shadow:
+        0 3px 7px
+        rgba(0, 0, 0, 0.16);
+
+    cursor: grab;
+
+    transition: 0.18s;
+
+    user-select: none;
+}
+
+
+.draggable:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 6px 12px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+.draggable.dragging {
+
+    opacity: 0.5;
+
+    transform:
+        scale(0.96);
+}
+
+
+/* ==========================================
+   DROP TARGETS
+========================================== */
+
+.targets {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+
+.target {
+
+    width: 105px;
+
+    height: 100px;
+
+    border:
+        2px dashed
+        #aaa;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    background: white;
+
+    transition: 0.2s;
+}
+
+
+.target.over {
+
+    border-color: #008c7d;
+
+    background: #e9fffb;
+
+    transform:
+        scale(1.03);
+}
+
+
+.target.correct {
+
+    border:
+        2px solid
+        #57b85f;
+
+    background: #f2fff3;
+}
+
+
+.target.wrong {
+
+    border:
+        2px solid
+        #df5656;
+
+    background: #fff0f0;
+
+    animation:
+        shake 0.25s;
+}
+
+
+.target img {
+
+    width: 101px;
+
+    height: 95px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* ==========================================
+   SCORE
+========================================== */
+
+.score {
+
+    text-align: center;
+
+    margin-top: 34px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+.game-message {
+
+    text-align: center;
+
+    min-height: 25px;
+
+    margin-top: 16px;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   RESULT
+========================================== */
+
+.result-card {
+
+    position: relative;
+
+    text-align: center;
+
+    padding:
+        72px
+        30px
+        46px;
+}
+
+
+.result-card h2 {
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+}
+
+
+.result-images {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+
+    flex-wrap: wrap;
+}
+
+
+.result-images img {
+
+    width: 105px;
+
+    height: 95px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border:
+        2px solid
+        #5fbd66;
+
+    box-shadow:
+        0 3px 8px
+        rgba(0, 0, 0, 0.16);
+}
+
+
+.complete {
+
+    color: #3d8f42;
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+
+.final-score {
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+.percentage {
+
+    font-size: 17px;
+
+    color: #075d54;
+
+    margin-bottom: 28px;
+}
+
+
+.result-card .green-btn {
+
+    width: 100%;
+
+    margin-top: 0;
+}
+
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes shake {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-6px);
+    }
+
+    50% {
+        transform: translateX(6px);
+    }
+
+    75% {
+        transform: translateX(-6px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .main-header {
+        min-height: 135px;
+    }
+
+
+    .main-header h1 {
+        font-size: 27px;
+    }
+
+
+    .login-card,
+    .category-card,
+    .game-card,
+    .result-card {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+
+    .login-card h2,
+    .category-card h2,
+    .game-card h2,
+    .result-card h2 {
+
+        font-size: 29px;
+    }
+
+
+    .logout {
+        right: 20px;
+    }
+
+
+    .draggable,
+    .target {
+        width: 95px;
+    }
+
+
+    .target img {
+        width: 91px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .page {
+
+        padding-left: 8px;
+
+        padding-right: 8px;
+    }
+
+
+    .main-header {
+
+        border-radius: 18px;
+    }
+
+
+    .screen {
+
+        padding-top: 25px;
+    }
+
+
+    .items,
+    .targets {
+
+        gap: 10px;
+    }
+
+
+    .draggable,
+    .target {
+
+        width: 85px;
+
+        height: 85px;
+    }
+
+
+    .target {
+
+        font-size: 14px;
+    }
+
+
+    .target img {
+
+        width: 81px;
+
+        height: 80px;
+    }
+
+}
+/* ==========================================
+   RESULT PAGE
+========================================== */
+
+.result-card {
+    position: relative;
+
+    width: min(720px, 94vw);
+
+    padding: 50px 40px;
+
+    text-align: center;
+}
+
+
+/* Result heading */
+
+.result-title {
+    font-size: 42px;
+
+    color: #005d52;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+
+.result-welcome {
+    font-size: 20px;
+
+    color: #555;
+
+    margin-bottom: 25px;
+
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   RESULT CIRCLE
+========================================== */
+
+.result-circle {
+
+    width: 150px;
+
+    height: 150px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #008c7d 0deg,
+            #008c7d 360deg
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.circle-score {
+
+    width: 125px;
+
+    height: 125px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.circle-score span {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: #00675c;
+}
+
+
+/* ==========================================
+   RESULT INFORMATION
+========================================== */
+
+.result-info {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+
+.result-box {
+
+    padding: 18px 10px;
+
+    background: #f5fafa;
+
+    border-radius: 12px;
+
+    border:
+        1px solid
+        #dcebea;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.result-label {
+
+    font-size: 13px;
+
+    color: #666;
+}
+
+
+.result-box strong {
+
+    font-size: 25px;
+}
+
+
+.correct-text {
+
+    color: #31933d;
+}
+
+
+.wrong-text {
+
+    color: #d84646;
+}
+
+
+/* ==========================================
+   RESULT MESSAGE
+========================================== */
+
+.result-message {
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    color: #007568;
+
+    margin: 22px 0;
+}
+
+
+/* ==========================================
+   MATCHED ITEMS
+========================================== */
+
+.matched-title {
+
+    font-size: 18px;
+
+    color: #444;
+
+    margin-bottom: 18px;
+}
+
+
+.result-images {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+}
+
+
+.result-images img {
+
+    width: 105px;
+
+    height: 95px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border:
+        3px solid
+        #58b85c;
+
+    box-shadow:
+        0 4px 10px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================
+   RESULT BUTTONS
+========================================== */
+
+.result-buttons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    align-items: center;
+}
+
+
+.result-buttons .green-btn {
+
+    width: 100%;
+
+    margin-top: 0;
+}
+
+
+.category-btn {
+
+    width: 100%;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #e8f4f2;
+
+    color: #00675c;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.category-btn:hover {
+
+    background: #d8ece9;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ==========================================
+   MOBILE RESULT PAGE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .result-card {
+
+        padding:
+            40px 20px;
+    }
+
+
+    .result-title {
+
+        font-size: 34px;
+    }
+
+
+    .result-info {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .result-circle {
+
+        width: 130px;
+
+        height: 130px;
+    }
+
+
+    .circle-score {
+
+        width: 108px;
+
+        height: 108px;
+    }
+
+
+    .circle-score span {
+
+        font-size: 27px;
+    }
+
+}
